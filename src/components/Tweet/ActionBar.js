@@ -5,7 +5,13 @@ import LikeButton from "../LikeButton";
 import Action from "./Action";
 import TweetActionIcon from "./TweetActionIcon";
 
-const ActionBar = ({ isRetweetedByCurrentUser, isLikedByCurrentUser }) => {
+import { TweetContext } from "../TweetContext";
+
+const ActionBar = () => {
+  const { isRetweetedByCurrentUser, isLikedByCurrentUser } = React.useContext(
+    TweetContext
+  );
+
   return (
     <Wrapper>
       <Action color="rgb(27, 149, 224)" size={40}>
