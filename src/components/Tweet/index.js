@@ -7,9 +7,7 @@ import Stats from "./Stats";
 import { TweetContext } from "../TweetContext";
 
 const Tweet = () => {
-  const { tweetContents, date, numOfLikes, numOfRetweets } = React.useContext(
-    TweetContext
-  );
+  const { tweetContents, date } = React.useContext(TweetContext);
   return (
     <Wrapper>
       <Header />
