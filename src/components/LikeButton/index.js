@@ -24,8 +24,8 @@ const LikeButton = ({ size = 40 }) => {
           <ConfettiPiece
             key={i}
             angle={360 * (i / 12)}
-            distanceMin={random(0, 8)}
-            distanceMax={random(15, 22)}
+            distanceMin={random(0, 5)}
+            distanceMax={random(12, 22)}
             color={sample(PARTICLE_COLORS)}
           />
         ))}

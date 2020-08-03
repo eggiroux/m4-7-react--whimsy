@@ -16,9 +16,9 @@ const Particle = ({ distanceMax, distanceMin, angle, children }) => {
   let animDelay = 0;
 
   if (random(1, 6) <= 3) {
-    animDelay = 500;
+    animDelay = 300;
   }
-  console.log(animDelay);
+  //console.log(animDelay);
 
   //console.log(x, y);
   const translationScaleStyle = useSpring({
