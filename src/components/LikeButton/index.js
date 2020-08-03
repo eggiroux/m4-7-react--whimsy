@@ -5,7 +5,10 @@ import Heart from "./Heart";
 import PoppingCircle from "./PoppingCircle";
 import ScaleIn from "./ScaleIn";
 
+import { range, sample, random } from "../../utils";
+
 import { TweetContext } from "../TweetContext";
+import ConfettiPiece from "./ConfettiPiece";
 
 const PARTICLE_COLORS = ["#e53935", "#1e88e5", "#43a047", "#fdd835", "#fb8c00"];
 
@@ -16,6 +19,16 @@ const LikeButton = ({ size = 40 }) => {
   return (
     <Wrapper style={{ width: size, height: size }}>
       {isLikedByCurrentUser && <PoppingCircle size={size} color="#E790F7" />}
+      {isLikedByCurrentUser &&
+        range(12).map((i) => (
+          <ConfettiPiece
+            key={i}
+            angle={360 * (i / 12)}
+            distanceMin={random(0, 8)}
+            distanceMax={random(15, 22)}
+            color={sample(PARTICLE_COLORS)}
+          />
+        ))}
       {isLikedByCurrentUser ? (
         <ScaleIn>
           <Heart width={heartSize} isToggled={isLikedByCurrentUser} />

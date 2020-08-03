@@ -20,7 +20,7 @@ export const TweetProvider = ({ children }) => {
       setNumOfLikes(numOfLikes + 1);
     }
     setIsLiked(!isLiked);
-    console.log("toggled like", numOfLikes);
+    //console.log("toggled like", numOfLikes);
   };
 
   const handleToggleRetweet = () => {
@@ -30,7 +30,7 @@ export const TweetProvider = ({ children }) => {
       setNumOfRetweets(numOfRetweets + 1);
     }
     setIsRetweeted(!isRetweeted);
-    console.log("toggled RT", numOfRetweets);
+    //console.log("toggled RT", numOfRetweets);
   };
 
   return (
